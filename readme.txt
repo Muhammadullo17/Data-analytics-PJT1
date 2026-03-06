@@ -207,8 +207,6 @@ This project demonstrates how data analytics techniques can be applied to emerge
 
 # 13. Appendix
 
-The appendix may include:
-
 * Important Python code snippets
 * Additional graphs and charts
 * Tables generated during analysis
