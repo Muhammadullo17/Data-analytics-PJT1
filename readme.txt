@@ -1,212 +1,118 @@
-Data Analytics Project Plan
+🚑 Monthly Ambulance Calls Data Analysis System
 
-# 1. Course Name
-
-**Data Analytics – Machine Learning**
+A data analytics project focused on analyzing emergency ambulance call patterns using Python and Pandas.
 
 ---
 
-# 2. Team Information
+# 📋 Project Overview
 
-**Team Name:** O2
+**Course:** Data Analytics – Machine Learning
+**Team:** O2 Team
 
-| Name                       | Student ID | Group  | Role                     |
-| -------------------------- | ---------- | ------ | ------------------------ |
-| Sobirov Muhammadullo       | 202490310  | I24E-1 | Team Leader              |
-| Tuychiboyev Elbek          | 202490341  | I24E-1 | Data Analyst             |
-| Muxammetkulov Abduraraxmon | 202490209  | I24E-1 | ML Engineer              |
-| Ibragimov Amza             | 202490132  | I24D   | Documentation Specialist |
+# 👥 Team Information
 
----
-
-# 3. Project Title
-
-**Exploratory Data Analysis of Monthly Ambulance Calls**
+| Name                       | Student ID | Role                     |
+| -------------------------- | ---------- | ------------------------ |
+| Sobirov Muhammadullo       | 202490310  | Team Leader              |
+| Tuychiboyev Elbek          | 202490341  | Data Analyst             |
+| Muxammetkulov Abduraraxmon | 202490209  | ML Engineer              |
+| Ibragimov Amza             | 202490132  | Documentation Specialist |
 
 ---
 
-# 4. Dataset Information
+# 🎯 Project Objectives
 
-**Dataset Title:** Monthly Ambulance Calls Dataset
-
-**Source Website / URL:**
-Kaggle ([https://www.kaggle.com](https://www.kaggle.com))
-
-**Description of the Dataset**
-
-The dataset contains information about the number of ambulance calls recorded each month in different districts or locations. The data includes the month, district name, and number of emergency calls received.
-
-**Why this Dataset was Selected**
-
-This dataset was selected because emergency medical services are important for public safety. Analyzing ambulance call data can help identify patterns in emergency demand and provide useful insights for planning healthcare resources.
-
-**Size of Dataset**
-
-Rows: approximately 100 – 200
-Columns: 3 – 5
-
-Example columns may include:
-
-* District
-* Month
-* Number of Calls
+✅ Analyze ambulance call data using Python and Pandas
+✅ Identify districts with the highest emergency call frequency
+✅ Detect monthly or seasonal trends in ambulance demand
+✅ Provide insights that may help improve emergency service planning
 
 ---
 
-# 5. Project Objectives
+# ⚠️ Problem Statement
 
-The main objective of this project is to analyze ambulance call data and identify patterns in emergency service usage.
+**Public Safety Challenge:**
+Emergency services need to understand patterns in ambulance calls to respond effectively.
 
-**Project Goals**
+**Data Challenge:**
+Without proper data analysis, it is difficult to identify trends in emergency call volumes.
 
-* To analyze monthly ambulance call data
-* To identify districts with higher emergency call volumes
-* To observe trends in ambulance calls over time
-
-**Research Questions**
-
-* Which districts receive the highest number of ambulance calls?
-* Are there specific months with increased emergency calls?
-* What trends can be observed in the dataset?
+**Planning Challenge:**
+Healthcare authorities require reliable data insights to allocate ambulance resources efficiently.
 
 ---
 
-# 6. Data Preparation (Using Pandas)
+# 🔧 Project Scope & Analysis Tasks
 
-The dataset will be prepared and cleaned before analysis.
+### Data Collection
 
-### Loading the Dataset
+📂 Obtain a dataset containing monthly ambulance call records from public datasets or Kaggle.
 
-```python
-import pandas as pd
+### Data Preparation
 
-df = pd.read_csv("monthly_calls_by_district.csv")
+🧹 Clean the dataset by handling missing values and duplicates
+🔄 Transform and prepare the data using **Pandas**
 
-df.head()
-```
+### Data Analysis
 
-### Checking Dataset Information
+📊 Identify districts with the highest number of calls
+📈 Analyze monthly trends in ambulance usage
+📉 Compare call volumes between different locations
 
-```python
-df.info()
-df.describe()
-```
+### Visualization
 
-### Handling Missing Values
-
-```python
-df.isnull().sum()
-df = df.dropna()
-```
-
-### Removing Duplicate Records
-
-```python
-df = df.drop_duplicates()
-```
-
-### Data Transformation
-
-Example: converting the month column into a proper format for analysis.
-
-```python
-df['Month'] = pd.to_datetime(df['Month'])
-```
+📊 Generate charts and graphs to clearly represent ambulance call patterns.
 
 ---
 
-# 7. Data Analysis Tasks
+# 🎓 Learning Outcomes
 
-The following analysis tasks will be performed using Pandas operations.
+By completing this project, students will:
 
-### Filtering Data
-
-```python
-df[df['Calls'] > 50]
-```
-
-This helps identify months with high emergency activity.
-
-### Sorting Data
-
-```python
-df.sort_values(by='Calls', ascending=False)
-```
-
-This shows which districts have the highest number of ambulance calls.
-
-### Grouping Data
-
-```python
-df.groupby('District')['Calls'].sum()
-```
-
-This calculates total ambulance calls for each district.
-
-### Pivot Table
-
-```python
-pd.pivot_table(df, values='Calls', index='District', columns='Month')
-```
-
-This allows comparison of monthly ambulance calls across districts.
+✨ Learn practical **data analysis using Python and Pandas**
+📊 Understand how to extract insights from real-world datasets
+📈 Develop skills in **data visualization and interpretation**
+🧠 Improve analytical and problem-solving abilities
 
 ---
 
-# 8. Key Findings and Insights
+# 👥 Expected Users
 
-From the analysis, the project aims to discover:
-
-* Districts with the highest emergency call volumes
-* Monthly patterns in ambulance calls
-* Possible trends or seasonal changes in emergency demand
-
-These insights may help understand how emergency services are used in different areas.
+| User Type           | Purpose                                     |
+| ------------------- | ------------------------------------------- |
+| Data Analysts       | Analyze ambulance call trends               |
+| Healthcare Planners | Use insights for emergency service planning |
+| Researchers         | Study emergency response patterns           |
 
 ---
 
-# 9. Project Timeline (5 Weeks)
+# 📊 Project Benefits
 
-| Week                     | Activities                                  |
-| ------------------------ | ------------------------------------------- |
-| Week 1 (06 Feb – 13 Feb) | Dataset search and project planning         |
-| Week 2 (13 Feb – 20 Feb) | Data cleaning and preparation               |
-| Week 3 (20 Feb – 06 Mar) | Data analysis and visualization             |
-| Week 4 (06 Mar – 13 Mar) | Report writing and presentation preparation |
-
-**Presentation Date:** 16 March
+🚑 Better understanding of ambulance call patterns
+📈 Improved data-driven decision making
+📊 Clear visualization of emergency demand trends
+🏥 Potential support for healthcare planning
 
 ---
 
-# 10. Outcome of the Project
-
-Through this project, students will develop practical skills in data analytics.
-
-**Skills Developed**
-
-* Data cleaning and preprocessing
-* Data analysis using Pandas
-* Identifying trends and patterns in data
-* Interpreting analytical results
-
----
-
-# 11. Conclusion
-
-This project demonstrates how data analytics techniques can be applied to emergency service data. By analyzing monthly ambulance calls, the team aims to identify patterns and trends that could help improve understanding of emergency service demand.
-
----
-
-# 12. References
+# 📚 References & Resources
 
 * Kaggle Dataset Repository
-* Pandas Official Documentation
-* Python Data Analysis Tutorials
+* Python Pandas Documentation
+* Data Analytics Tutorials
+* Course Materials for Data Analytics – Machine Learning
 
 ---
 
-# 13. Appendix
+# 📎 Appendix
 
-* Important Python code snippets
-* Additional graphs and charts
-* Tables generated during analysis
+* Python code snippets
+* Data analysis tables
+* Graphs and visualizations
+* Additional dataset information
+
+---
+
+# ✍️ Conclusion
+
+This project demonstrates how data analytics can be used to analyze emergency ambulance call data and identify meaningful patterns. Using Python and Pandas, the team will explore trends in ambulance demand and present insights that may support better planning and resource allocation in emergency healthcare services.
